@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { FC } from 'react'
 
-function Header() {
+interface HeaderProps { }
+
+const Header: FC<HeaderProps> = () => {
   return (
-    <div>Header</div>
+    <header>hey head</header>
   )
 }
 
