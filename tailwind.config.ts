@@ -9,8 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+        background: "var(--background)",
+        sidebar: "var(--sidebar)",
+        textPrimary: "var(--text-primary)",
+        textSecondary: "var(--text-secondary)",
+        error: "var(--error)",
+        link: "var(--link)",
+        disabled: "var(--disabled)",
       },
       fontSize: {
         base: '1rem',
