@@ -27,6 +27,12 @@ export const METADATA = {
       ref: "contact",
     },
   ];
+  export const NAV_ITEMS = [
+    { title: "Home", href: "/" },
+    { title: "Work", href: "/work" },
+    { title: "About", href: "/about" },
+    { title: "Contact", href: "/contact" },
+  ];
   
   export const TYPED_STRINGS = [
     "I design and develop things",
