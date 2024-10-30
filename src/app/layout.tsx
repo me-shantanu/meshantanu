@@ -6,7 +6,7 @@ import { ThemeProvider } from 'next-themes'
 import Cursor from '@/components/common-ui/cursor/Cursor'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Contact from '@/components/Contact';
+import Contact from '@/components/Contact/Contact'
 
 
 const geistSans = localFont({

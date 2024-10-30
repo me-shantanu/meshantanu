@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion';
 import Preloader from '@/components/Preloader';
 import Projects from '@/components/Projects';
-import Description from '@/components/Description';
-import SlidingImages from '@/components/SlidingImages';
+import Description from '@/components/Description/Description';
+import SlidingImages from '@/components/SlidingImages/SlidingImages';
 import Landing from '@/components/Landing/Landing';
 
 const Home: FC = () => {
@@ -16,8 +16,8 @@ const Home: FC = () => {
   useEffect( () => {
     (
       async () => {
-          const LocomotiveScroll = (await import('locomotive-scroll')).default
-          const locomotiveScroll = new LocomotiveScroll();
+          // const LocomotiveScroll = (await import('locomotive-scroll')).default
+          // const locomotiveScroll = new LocomotiveScroll();
 
           setTimeout( () => {
             setIsLoading(false);

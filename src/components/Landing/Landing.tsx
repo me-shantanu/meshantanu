@@ -1,5 +1,5 @@
 'use client'
-import React , { FC,useRef, useLayoutEffect } from 'react';
+import React , { useRef, useLayoutEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import gsap from 'gsap';

@@ -1,13 +1,12 @@
 'use client'
-import React, { FC, useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import ThemeToggle from './ThemeToggle'
 import Link from 'next/link'
 import HeaderMobile from './HeaderMobile'
 import { NAV_ITEMS } from '@/utils/constants'
 
-interface HeaderProps {}
 
-const Header: FC<HeaderProps> = () => {
+const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
