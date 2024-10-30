@@ -1,16 +1,16 @@
 .contact{
-    color: white;
+    color: var(--text-primary);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #141516;
+    background-color: var(--sidebar);
     position: relative;
     .body{
         padding-top: 200px;
         width: 100%;
         max-width: 1800px;
-        background-color: #141516;
+        background-color: var(--sidebar);
 
         .title{
             border-bottom: 1px solid rgb(134, 134, 134);
