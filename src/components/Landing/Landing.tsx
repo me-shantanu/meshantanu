@@ -48,6 +48,7 @@ const Landing = () =>{
       className="relative flex h-screen overflow-hidden bg-cover"
     >
       <Image src="/images/background.jpg" fill={true} alt="background" className="object-cover" />
+      <div className="overlay"></div>
       <div className="absolute lg:top-[calc(100vh-350px)] sm:top-[calc(100vh-180px)] md:top-[calc(100vh-230px)]">
         <div ref={slider} className="relative whitespace-nowrap">
           <p ref={firstText} className="inline-block text-textPrimary lg:text-[230px] sm:text-[100px] md:text-[150px] font-medium pr-12">

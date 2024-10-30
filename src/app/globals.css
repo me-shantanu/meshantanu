@@ -29,6 +29,7 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   cursor: none !important;
+  overflow-x: hidden;
 }
 
 a {
@@ -39,4 +40,13 @@ a {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--background);
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
 }

@@ -2,11 +2,12 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import Header from '@/components/Header/Header'
-import Footer from '@/components/Footer/Footer'
 import { ThemeProvider } from 'next-themes'
 import Cursor from '@/components/common-ui/cursor/Cursor'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Contact from '@/components/Contact';
+
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -41,7 +42,7 @@ export default function RootLayout({
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <Header />
         {children}
-        <Footer />
+        <Contact />
       </ThemeProvider>
       </body>
     </html>

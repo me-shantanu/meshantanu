@@ -7,7 +7,6 @@ import Preloader from '@/components/Preloader';
 import Projects from '@/components/Projects';
 import Description from '@/components/Description';
 import SlidingImages from '@/components/SlidingImages';
-import Contact from '@/components/Contact';
 import Landing from '@/components/Landing/Landing';
 
 const Home: FC = () => {
@@ -39,7 +38,6 @@ const Home: FC = () => {
       <Projects />
       <ProjectsSection isDesktop={true}/>
       <SlidingImages />
-      <Contact />
     </main>
   )
 }
