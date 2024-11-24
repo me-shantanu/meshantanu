@@ -28,13 +28,13 @@ body {
   color: var(--text-primary);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  cursor: none !important;
+  /* cursor: none !important; */
   overflow-x: hidden;
 }
 
-a {
+/* a {
   cursor: none;
-}
+} */
 
 @layer utilities {
   .text-balance {

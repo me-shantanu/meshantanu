@@ -43,7 +43,8 @@ const Home: FC = () => {
 
   const [isDesktop, setisDesktop] = useState(true);
 
-  let timer: NodeJS.Timeout = null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let timer :any = null;
 
   const debouncedDimensionCalculator = () => {
     clearTimeout(timer);
