@@ -46,7 +46,7 @@ const Landing = () =>{
       initial="initial"
       animate="enter"
       className="relative flex h-screen overflow-hidden bg-cover"
-    >
+    >  
       <Image src="/images/background.jpg" fill={true} alt="background" className="object-cover" />
       <div className="overlay"></div>
       <div className="absolute lg:top-[calc(100vh-350px)] sm:top-[calc(100vh-180px)] md:top-[calc(100vh-230px)]">

@@ -8,7 +8,7 @@ import { IDesktop, NO_MOTION_PREFERENCE_QUERY } from "@/utils/utils";
 import ProjectTile from "./ProjectTile";
 
 // Register the ScrollTrigger plugin with GSAP
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const PROJECT_STYLES = {
   SECTION: "w-full relative select-none section-container flex-col flex py-8 justify-center",
