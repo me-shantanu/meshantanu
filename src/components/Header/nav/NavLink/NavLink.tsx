@@ -13,7 +13,11 @@ interface NavLinkProps {
   setSelectedIndicator: Dispatch<SetStateAction<string>>;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ data, isActive, setSelectedIndicator }) => {
+const NavLink: React.FC<NavLinkProps> = ({
+  data,
+  isActive,
+  setSelectedIndicator,
+}) => {
   const { title, href, index } = data;
 
   return (
@@ -28,7 +32,7 @@ const NavLink: React.FC<NavLinkProps> = ({ data, isActive, setSelectedIndicator 
     >
       <motion.div
         variants={scale}
-        animate={isActive ? "open" : "closed"}
+        animate={isActive ? 'open' : 'closed'}
         className="w-2.5 h-2.5 bg-white rounded-full absolute left-[-30px]"
       />
       <Link href={href} className="text-white">

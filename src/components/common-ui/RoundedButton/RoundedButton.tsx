@@ -9,10 +9,10 @@ interface RoundedButtonProps extends React.HTMLAttributes<HTMLDivElement> {
   backgroundColor?: string; // Optional, with a default value
 }
 
-const RoundedButton: React.FC<RoundedButtonProps> = ({ 
-  children, 
-  backgroundColor = "#455CE9", 
-  ...attributes 
+const RoundedButton: React.FC<RoundedButtonProps> = ({
+  children,
+  backgroundColor = '#455CE9',
+  ...attributes
 }) => {
   const circle = useRef<HTMLDivElement>(null);
   const timeline = useRef<gsap.core.Timeline | null>(null);
@@ -21,8 +21,16 @@ const RoundedButton: React.FC<RoundedButtonProps> = ({
   useEffect(() => {
     timeline.current = gsap.timeline({ paused: true });
     timeline.current
-      .to(circle.current, { top: "-25%", width: "150%", duration: 0.4, ease: "power3.in" }, "enter")
-      .to(circle.current, { top: "-150%", width: "125%", duration: 0.25 }, "exit");
+      .to(
+        circle.current,
+        { top: '-25%', width: '150%', duration: 0.4, ease: 'power3.in' },
+        'enter'
+      )
+      .to(
+        circle.current,
+        { top: '-150%', width: '125%', duration: 0.25 },
+        'exit'
+      );
   }, []);
 
   const manageMouseEnter = () => {
@@ -38,15 +46,19 @@ const RoundedButton: React.FC<RoundedButtonProps> = ({
 
   return (
     <Magnetic>
-      <div 
-        className={styles.roundedButton} 
-        style={{ overflow: "hidden" }} 
-        onMouseEnter={manageMouseEnter} 
-        onMouseLeave={manageMouseLeave} 
+      <div
+        className={styles.roundedButton}
+        style={{ overflow: 'hidden' }}
+        onMouseEnter={manageMouseEnter}
+        onMouseLeave={manageMouseLeave}
         {...attributes}
       >
         {children}
-        <div ref={circle} style={{ backgroundColor }} className={styles.circle}></div>
+        <div
+          ref={circle}
+          style={{ backgroundColor }}
+          className={styles.circle}
+        ></div>
       </div>
     </Magnetic>
   );

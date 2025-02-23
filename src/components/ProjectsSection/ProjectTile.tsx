@@ -1,8 +1,8 @@
-import styles from "./ProjectTile.module.scss";
-import Image from "next/image";
-import React from "react";
-import { IProject } from "@/utils/constants";
-import Link from "next/link";
+import styles from './ProjectTile.module.scss';
+import Image from 'next/image';
+import React from 'react';
+import { IProject } from '@/utils/constants';
+import Link from 'next/link';
 
 const ProjectTile = ({
   project,
@@ -28,7 +28,7 @@ const ProjectTile = ({
     >
       <div className="flex flex-col pb-8">
         {techStack.map((tech, i) => (
-          <div className={`${i % 2 === 0 && "ml-16"} mb-4`} key={tech}>
+          <div className={`${i % 2 === 0 && 'ml-16'} mb-4`} key={tech}>
             <Image
               src={`/projects/tech/${tech}.svg`}
               alt={tech}
@@ -45,7 +45,7 @@ const ProjectTile = ({
   const renderDescription = (description: string): React.ReactNode => (
     <h2
       className="text-lg z-10 tracking-wide font-medium"
-      style={{ transform: "translateZ(0.8rem)" }}
+      style={{ transform: 'translateZ(0.8rem)' }}
     >
       {description}
     </h2>
@@ -54,7 +54,7 @@ const ProjectTile = ({
   const renderProjectName = (name: string): React.ReactNode => (
     <h1
       className="text-2xl sm:text-3xl z-10 pl-2"
-      style={{ transform: "translateZ(3rem)" }}
+      style={{ transform: 'translateZ(3rem)' }}
     >
       {name}
     </h1>
@@ -100,10 +100,10 @@ const ProjectTile = ({
       className="link overflow-hidden rounded-xl snap-start"
       style={{
         maxWidth: animationEnabled
-          ? "calc(100vw - 2rem)"
-          : "calc(100vw - 4rem)",
-        flex: "1 0 auto",
-        WebkitMaskImage: "-webkit-radial-gradient(white, black)",
+          ? 'calc(100vw - 2rem)'
+          : 'calc(100vw - 4rem)',
+        flex: '1 0 auto',
+        WebkitMaskImage: '-webkit-radial-gradient(white, black)',
       }}
     >
       <div

@@ -7,8 +7,6 @@ import Footer from './Footer/Footer';
 import { menuSlide } from '../animation';
 import { NAV_ITEMS } from '@/utils/constants';
 
-
-
 export default function NavMobile() {
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
@@ -29,7 +27,7 @@ export default function NavMobile() {
           <div className="uppercase text-[11px] text-[#999] border-b border-[#999] mb-10">
             <p>Navigation</p>
           </div>
-          {NAV_ITEMS.map((data:{title:string , href:string}, index) => (
+          {NAV_ITEMS.map((data: { title: string; href: string }, index) => (
             <NavLink
               key={index}
               data={{ ...data, index }}

@@ -12,12 +12,19 @@ const Magnetic: React.FC<MagneticProps> = ({ children }) => {
   useEffect(() => {
     if (!magnetic.current) return;
 
-    const xTo = gsap.quickTo(magnetic.current, "x", { duration: 1, ease: "elastic.out(1, 0.3)" });
-    const yTo = gsap.quickTo(magnetic.current, "y", { duration: 1, ease: "elastic.out(1, 0.3)" });
+    const xTo = gsap.quickTo(magnetic.current, 'x', {
+      duration: 1,
+      ease: 'elastic.out(1, 0.3)',
+    });
+    const yTo = gsap.quickTo(magnetic.current, 'y', {
+      duration: 1,
+      ease: 'elastic.out(1, 0.3)',
+    });
 
     const handleMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e;
-      const { height, width, left, top } = magnetic.current!.getBoundingClientRect();
+      const { height, width, left, top } =
+        magnetic.current!.getBoundingClientRect();
       const x = clientX - (left + width / 2);
       const y = clientY - (top + height / 2);
       xTo(x * 0.35);
@@ -30,12 +37,12 @@ const Magnetic: React.FC<MagneticProps> = ({ children }) => {
     };
 
     const currentElement = magnetic.current;
-    currentElement.addEventListener("mousemove", handleMouseMove);
-    currentElement.addEventListener("mouseleave", handleMouseLeave);
+    currentElement.addEventListener('mousemove', handleMouseMove);
+    currentElement.addEventListener('mouseleave', handleMouseLeave);
 
     return () => {
-      currentElement.removeEventListener("mousemove", handleMouseMove);
-      currentElement.removeEventListener("mouseleave", handleMouseLeave);
+      currentElement.removeEventListener('mousemove', handleMouseMove);
+      currentElement.removeEventListener('mouseleave', handleMouseLeave);
     };
   }, []);
 
